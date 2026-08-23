@@ -2,6 +2,8 @@
 
 PS-141 runtime monitor for quantum-inspired digital signature verification. Advisory monitoring layer strictly separated from the authoritative QDS protocol engine.
 
+> Full architecture specification: see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+
 ## Architecture
 
 - **`qds/`** — Authoritative 3-qubit statevector protocol (Bell pair → Teleportation → QS-L check)
@@ -15,10 +17,9 @@ PS-141 runtime monitor for quantum-inspired digital signature verification. Advi
 ### Backend
 
 ```bash
-cd qsentinel-system
 pip install -r requirements.txt
 pip install pytest
-uvicorn api.main:app --reload --port 8000
+python -m uvicorn api.main:app --reload --port 8001
 ```
 
 ### Frontend
@@ -46,7 +47,6 @@ Open **http://localhost:5173**
 ## Tests
 
 ```bash
-cd qsentinel-system
 pytest tests/ -v
 ```
 
