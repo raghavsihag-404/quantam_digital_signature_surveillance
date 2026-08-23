@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+*.db
+
+# Forensic / runtime artifacts
+forensic_store/*.jsonl
+forensic_store/*.pem
+db/qsentinel.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE / OS
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
